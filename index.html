@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-2">
+    <div
+        class="min-w-[315px] max-w-[440px] h-[380px] shadow-[0_2px_6px_2px_rgba(0, 0, 0, 0.15)] drop-shadow-[0_1px_2px_0_rgba(0, 0, 0, 0.3)]">
+        <div id="card-img" class="h-[222px] bg-[#D1D5DB]"></div>
+        <div id="card-body" class="flex flex-col">
+            <div id="card-title" class="flex justify-between items-center">
+                <div id="headers" class="flex flex-col gap-[4px]">
+                    <p>Subheader</p>
+                    <p>Header</p>
+                </div>
+                <div id="text">
+                    <p>Text</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+
+margin: 0 auto;
+width: 73px;
+height: 48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Body */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px 12px;
+gap: 12px;
+
+width: 316px;
+height: 158px;
+
+background: #FFFFFF;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Frame 5 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 292px;
+height: 48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
