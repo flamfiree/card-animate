@@ -4,84 +4,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            content: ["./src/**/*.{html,js}"],
+            theme: {
+                fontFamily: {
+                    sans: ["'Inter'", "sans"],
+                }
+            }
+        }
+    </script>
 </head>
 
-<body class="p-2">
-    <div
-        class="min-w-[315px] max-w-[440px] h-[380px] shadow-[0_2px_6px_2px_rgba(0, 0, 0, 0.15)] drop-shadow-[0_1px_2px_0_rgba(0, 0, 0, 0.3)]">
-        <div id="card-img" class="h-[222px] bg-[#D1D5DB]"></div>
-        <div id="card-body" class="flex flex-col">
-            <div id="card-title" class="flex justify-between items-center">
-                <div id="headers" class="flex flex-col gap-[4px]">
-                    <p>Subheader</p>
-                    <p>Header</p>
+<body class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2 bg-neutral-100">
+    <div class="flex flex-col gap-2">
+        <p class="text-center">До</p>
+        <div
+            class="relative h-[380px] min-w-[315px] max-w-[440px] shadow-[0_2px_6px_2px_rgba(0,0,0,0.15)] drop-shadow-[0_1px_2px_0_rgba(0,0,0,0.3)]">
+            <div id="card-img" class="relative h-[222px] bg-[#D1D5DB]">
+                <!-- <img src="photo.jpg" alt="photo" class="h-full w-full object-cover" /> -->
+                <div id="badge" class="absolute right-3 top-3 rounded-md bg-white p-1.5 text-[#1F2937]">
+                    <p id="badge-text" class="px-1 text-xs font-medium">button</p>
                 </div>
-                <div id="text">
-                    <p>Text</p>
+            </div>
+            <div id="card-body" class="absolute inset-x-0 bottom-0 flex flex-col gap-3 bg-white px-3 py-4">
+                <div id="card-title" class="flex items-center justify-between">
+                    <div id="headers" class="flex flex-col gap-1">
+                        <p id="subheader" class="text-sm font-normal text-[#6B7280]">
+                            Subheader
+                        </p>
+                        <p id="header" class="text-xl font-medium text-[#1F2937]">Header</p>
+                    </div>
+                    <div id="text">
+                        <p id="header-text" class="text-lg font-medium">Text</p>
+                    </div>
+                </div>
+                <div id="button-section" class="flex flex-col gap-1">
+                    <button id="button" class="rounded-[8px] bg-[#6B7280] px-4 py-3.5 text-[#FFFFFF]">
+                        <p id="button-text" class="text-[15px] font-semibold">Button</p>
+                    </button>
+                    <div id="sub-text" class="text-center text-xs font-normal text-[#6B7280]">
+                        Sub text
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col gap-2">
+        <p class="text-center">После</p>
+        <div
+            class="relative h-[380px] min-w-[315px] max-w-[440px] shadow-[0_2px_6px_2px_rgba(0,0,0,0.15)] drop-shadow-[0_1px_2px_0_rgba(0,0,0,0.3)]">
+            <div id="card-img" class="relative h-[222px] bg-[#D1D5DB]">
+                <!-- <img src="photo.jpg" alt="photo" class="h-full w-full object-cover" /> -->
+                <div id="badge" class="absolute right-3 top-3 rounded-md bg-white p-1.5 text-[#1F2937]">
+                    <p id="badge-text" class="px-1 text-xs font-medium">button</p>
+                </div>
+            </div>
+            <div id="card-body"
+                class="absolute inset-x-0 bottom-0 flex flex-col gap-3 bg-white px-3 py-4 transition-all">
+                <div id="card-title" class="flex items-center justify-between">
+                    <div id="headers" class="flex flex-col gap-1">
+                        <p id="subheader" class="text-sm font-normal text-[#6B7280]">
+                            Subheader
+                        </p>
+                        <p id="header" class="text-xl font-medium text-[#1F2937]">Header</p>
+                    </div>
+                    <div id="text">
+                        <p id="header-text" class="text-lg font-medium">Text</p>
+                    </div>
+                </div>
+                <div id="list"
+                    class="align-start flex flex-col gap-2 border-t-[1px] border-solid border-[#E5E7EB] pt-3">
+                    <div id="list-item" class="flex flex-row items-start gap-1 p-0">
+                        <p id="list-item-text" class="text-sm font-normal text-[#6B7280]">
+                            Text
+                        </p>
+                        <p id="list-item-link" class="grow text-right text-sm font-normal text-[#1F2937]">
+                            Link
+                        </p>
+                    </div>
+                    <div id="list-item" class="flex flex-row items-start gap-1 p-0">
+                        <p id="list-item-text" class="text-sm font-normal text-[#6B7280]">
+                            Text
+                        </p>
+                        <p id="list-item-link" class="grow text-right text-sm font-normal text-[#1F2937]">
+                            Link
+                        </p>
+                    </div>
+                    <div id="list-item" class="flex flex-row items-start gap-1 p-0">
+                        <p id="list-item-text" class="text-sm font-normal text-[#6B7280]">
+                            Text
+                        </p>
+                        <p id="list-item-link" class="grow text-right text-sm font-normal text-[#1F2937]">
+                            Link
+                        </p>
+                    </div>
+                    <div id="list-item" class="flex flex-row items-start gap-1 p-0">
+                        <p id="list-item-text" class="text-sm font-normal text-[#6B7280]">
+                            Text
+                        </p>
+                        <p id="list-item-link" class="grow text-right text-sm font-normal text-[#1F2937]">
+                            Link
+                        </p>
+                    </div>
+                </div>
+                <div id="button-section" class="flex flex-col gap-1">
+                    <button id="button" class="rounded-[8px] bg-[#6B7280] px-4 py-3.5 text-[#FFFFFF]">
+                        <p id="button-text" class="text-[15px] font-semibold">Button</p>
+                    </button>
+                    <div id="sub-text" class="text-center text-xs font-normal text-[#6B7280]">
+                        Sub text
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col gap-2">
+        <p class="text-center">Анимация</p>
+        <div
+            class="relative overflow-hidden h-[380px] min-w-[315px] max-w-[440px] shadow-[0_2px_6px_2px_rgba(0,0,0,0.15)] drop-shadow-[0_1px_2px_0_rgba(0,0,0,0.3)]">
+            <div id="card-img" class="relative h-[222px] bg-[#D1D5DB]">
+                <!-- <img src="photo.jpg" alt="photo" class="h-full w-full object-cover" /> -->
+                <div id="badge" class="absolute right-3 top-3 rounded-md bg-white p-1.5 text-[#1F2937]">
+                    <p id="badge-text" class="px-1 text-xs font-medium">button</p>
+                </div>
+            </div>
+            <div id="card-body"
+                class="absolute group transition-all h-[166px] hover:h-[295px] duration-300 ease-in-out inset-x-0 bottom-0 flex flex-col justify-between gap-3 bg-white px-3 py-4">
+                <div id="card-title" class="flex items-center justify-between">
+                    <div id="headers" class="flex flex-col gap-1">
+                        <p id="subheader" class="text-sm font-normal text-[#6B7280]">
+                            Subheader
+                        </p>
+                        <p id="header" class="text-xl font-medium text-[#1F2937] ">Header</p>
+                    </div>
+                    <div id="text">
+                        <p id="header-text" class="text-lg font-medium">Text</p>
+                    </div>
+                </div>
+                <div id="list"
+                    class="transition hidden group-hover:flex opacity-0 group-hover:opacity-100 duration-300 ease-in-out align-start  flex-col gap-2 border-t-[1px] border-solid border-[#E5E7EB] pt-3">
+                    <div id="list-item" class="flex flex-row items-start gap-1 p-0">
+                        <p id="list-item-text" class="text-sm font-normal text-[#6B7280]">
+                            Text
+                        </p>
+                        <p id="list-item-link" class="grow text-right text-sm font-normal text-[#1F2937]">
+                            Link
+                        </p>
+                    </div>
+                    <div id="list-item" class="flex flex-row items-start gap-1 p-0">
+                        <p id="list-item-text" class="text-sm font-normal text-[#6B7280]">
+                            Text
+                        </p>
+                        <p id="list-item-link" class="grow text-right text-sm font-normal text-[#1F2937]">
+                            Link
+                        </p>
+                    </div>
+                    <div id="list-item" class="flex flex-row items-start gap-1 p-0">
+                        <p id="list-item-text" class="text-sm font-normal text-[#6B7280]">
+                            Text
+                        </p>
+                        <p id="list-item-link" class="grow text-right text-sm font-normal text-[#1F2937]">
+                            Link
+                        </p>
+                    </div>
+                    <div id="list-item" class="flex flex-row items-start gap-1 p-0">
+                        <p id="list-item-text" class="text-sm font-normal text-[#6B7280]">
+                            Text
+                        </p>
+                        <p id="list-item-link" class="grow text-right text-sm font-normal text-[#1F2937]">
+                            Link
+                        </p>
+                    </div>
+                </div>
+                <div id="button-section" class="flex flex-col gap-1">
+                    <button id="button" class="rounded-[8px] bg-[#6B7280] px-4 py-3.5 text-[#FFFFFF]">
+                        <p id="button-text" class="text-[15px] font-semibold">Button</p>
+                    </button>
+                    <div id="sub-text" class="text-center text-xs font-normal text-[#6B7280]">
+                        Sub text
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>
-
-/* Title */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 4px;
-
-margin: 0 auto;
-width: 73px;
-height: 48px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Body */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 16px 12px;
-gap: 12px;
-
-width: 316px;
-height: 158px;
-
-background: #FFFFFF;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-/* Frame 5 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 0px;
-gap: 12px;
-
-width: 292px;
-height: 48px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
